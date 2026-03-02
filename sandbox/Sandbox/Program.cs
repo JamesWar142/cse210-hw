@@ -1,27 +1,71 @@
 using System;
 
-class Program
-{
-    public static void Greeting()
-    {
-        Console.WriteLine("Hello Bob");
-    }
 
-    public static int AddNumbers(int n1, int n2)
-    {
-        return n1 + n2;
-    }
+class Bobsyouruncle
+{
+//     public static void passByValue(int a)
+//     {
+//         a++;
+//         Console.WriteLine($"In the value function {a}");
+//     }
+//     public static void passByRef(ref int x)
+//     {
+//         x++;
+//         Console.WriteLine($"In the ref function {x}");
+//     }
+
+//     public static void passByOut(out int y)
+//     {
+//         y = 10;
+//     }
+
+//     static void Main(string[] args)
+//     {
+//         int x= 20;
+//         Console.WriteLine($"In the main 1: {x}");
+
+//         passByValue(x);
+//         Console.WriteLine($"In the main 2: {x}");
+
+//         passByRef(ref x);
+//         Console.WriteLine($"In the main 3: {x}");
+
+//         int z;
+//         passByOut(out z);
+//         Console.WriteLine(z);
+//     }
+// }
+
+
+// class Program
+// {
+//     public static void Greeting()
+//     {
+//         Console.WriteLine("Hello Bob");
+//     }
+
+//     public static int AddNumbers(int n1, int n2)
+//     {
+//         return n1 + n2;
+//     }
     static void Main(string[] args)
     {
-        Greeting();
-        // for(int i = 0; i < 10; i += 3)
-        // {
-        //     Console.WriteLine(i);
-        // }
+        Console.WriteLine("Circle");
 
-        // int y = 10;
-        // int z = ++y;
-        // Console.WriteLine(y);
+        Circle myCircle = new Circle();
+        
+        myCircle.SetRadius(10);
+        Console.WriteLine(myCircle.GetRadius());
+    }
+//         Greeting();
+//         // for(int i = 0; i < 10; i += 3)
+//         // {
+//         //     Console.WriteLine(i);
+//         // }
+
+//         // int y = 10;
+//         // int z = ++y;
+//         // Console.WriteLine(y);
         // Console.WriteLine(z);
 
         // for(int i = 100000; i >= -100000; i -= 10000)
@@ -76,5 +120,6 @@ class Program
         // {
         //     Console.WriteLine(i);
         // }
-    }
+//     }
+// }
 }
