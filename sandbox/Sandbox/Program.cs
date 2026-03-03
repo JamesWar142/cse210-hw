@@ -56,6 +56,9 @@ class Bobsyouruncle
         
         myCircle.SetRadius(10);
         Console.WriteLine(myCircle.GetRadius());
+        Console.WriteLine(myCircle.GetCircumference());
+        Console.WriteLine(myCircle.GetArea());
+        Console.WriteLine(myCircle.GetDiameter());
     }
 //         Greeting();
 //         // for(int i = 0; i < 10; i += 3)

@@ -9,4 +9,19 @@ public class Circle()
     {
         _radius = radius;
     }
+
+    public double GetArea()
+    {
+        return Math.PI * _radius *_radius;
+    }
+
+    public double GetDiameter()
+    {
+        return 2 * _radius;
+    }
+
+    public double GetCircumference()
+    {
+        return 2 * Math.PI * _radius;
+    }
 }
