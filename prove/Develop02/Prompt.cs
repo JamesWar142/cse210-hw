@@ -1,4 +1,4 @@
-public class Prompt
+class Prompt
 {
     
 }

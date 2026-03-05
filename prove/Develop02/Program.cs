@@ -5,6 +5,8 @@ class Program
     static void Main(string[] args)
     {
         Menu menu = new Menu();
+        Entry entry = new Entry();
+
         bool done = false;
         int userResponse;
         do
@@ -13,9 +15,11 @@ class Program
             switch (userResponse)
             {
                 case 1:
-                // Create new journal entry
-                // Add entry to list of entries
-                break;
+                    // Create new journal entry
+                    // Add entry to list of entries
+                    entry.CreateEntryWithData();
+                    entry.CreateEntry();
+                    break;
                 case 2:
                 // Display journal entries
                 break;

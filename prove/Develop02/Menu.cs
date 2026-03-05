@@ -5,10 +5,10 @@ class Menu
     public string[] _menuStrings = {
         "Welcome to the Journal Program",
         "Create, Display, Save, and Load Entries",
-        "1. Create a journal Enrty",
+        "1. Create a Journal Entry",
         "2. Display Journal",
-        "3. Save journal to file",
-        "4. Read journal from file",
+        "3. Save Journal to File",
+        "4. Read Journal from File",
         "5. Quit"
     };
 
