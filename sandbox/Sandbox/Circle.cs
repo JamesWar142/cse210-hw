@@ -1,12 +1,27 @@
-public class Circle()
+class Circle
 {
-    public double _radius;
+    private double _radius;
+
+    public Circle ()
+    {
+        _radius = 0;
+    }
+
+    public Circle (double radius)
+    {
+        SetRadius(radius);
+    }
     public double GetRadius()
     {
         return _radius;
     }
     public void SetRadius(double radius)
     {
+        if(radius < 0)
+        {
+            Console.WriteLine("Invalid Radius, nust be a postive value.");
+            radius = 0;
+        }
         _radius = radius;
     }
 

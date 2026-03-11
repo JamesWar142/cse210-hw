@@ -1,30 +1,31 @@
 class Entry
 {
-    public string _date;
-    public string _prompt;
-    public string _response;
-    public string[] _prompts =
-    {
-        "How was your day?",
-        "What did you do today?",
-        "How was you week?"
-    };
+    // attributes
+    public string _givenPrompt;
+    public string _entryDateTime;
+    public string _entryText;
 
-    public void DisplayEntry()
+    // constructor
+    public Entry(string prompt, string text)
     {
-
+        _givenPrompt = prompt;
+        _entryText = text;
+        _entryDateTime = DateTime.Now.ToString("M/d/yyyy h:mm:ss tt");
     }
-    public void CreateEntry()
-    {
-        Random random = new Random();
-        string randomPrompt = _prompts[random.Next(_prompts.Length)];
 
-        Console.WriteLine(randomPrompt);
-        string userResponce = Console.ReadLine();
-    }
-    public void CreateEntryWithData()
+    // constructor used for loading existing entries
+    public Entry(string date, string prompt, string text)
     {
-        DateTime _date = DateTime.Now;
-        Console.WriteLine(_date);
+        _entryDateTime = date;
+        _givenPrompt = prompt;
+        _entryText = text;
+    }
+
+    // behavior
+    public void Display()
+    {
+        Console.WriteLine($"{_entryDateTime} -- { _givenPrompt}");
+        Console.WriteLine(_entryText);
+        Console.WriteLine();
     }
 }

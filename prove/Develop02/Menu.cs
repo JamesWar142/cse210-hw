@@ -1,31 +1,19 @@
-using System.ComponentModel;
-
 class Menu
 {
-    public string[] _menuStrings = {
-        "Welcome to the Journal Program",
-        "Create, Display, Save, and Load Entries",
-        "1. Create a Journal Entry",
-        "2. Display Journal",
-        "3. Save Journal to File",
-        "4. Read Journal from File",
-        "5. Quit"
-    };
-
-    public int ProcessMenu()
+    public void DisplayMenu()
     {
-        int userResponse = 0;
-
-        do
-        {
-            Console.Clear();
-            foreach(string line in _menuStrings)
-            {
-                Console.WriteLine(line);
-            }
-            userResponse = int.Parse(Console.ReadLine());
-        } while(userResponse < 1 || userResponse >5);
-
-        return userResponse;
+        Console.WriteLine("Please Select one of the choices bellow:");
+        Console.WriteLine("1: Write");
+        Console.WriteLine("2: Display");
+        Console.WriteLine("3: Save");
+        Console.WriteLine("4: Load");
+        Console.WriteLine("5: Quit");
+    }
+    public string MenuChoice()
+    {
+        //we use public string as we want to keep response
+        Console.Write("What would you like to do: ");
+        return Console.ReadLine();
+        // return is used to identify proper string
     }
 }

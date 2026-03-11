@@ -1,38 +1,61 @@
 using System;
+using System.Collections;
 
 class Program
 {
     static void Main(string[] args)
     {
         Menu menu = new Menu();
-        Entry entry = new Entry();
+        Journal journal = new Journal();
+        Prompt genPrompt = new Prompt();
 
-        bool done = false;
-        int userResponse;
-        do
+        bool running = true;
+
+        while (running)
         {
-            userResponse = menu.ProcessMenu();
-            switch (userResponse)
+            menu.DisplayMenu();
+            string choice = menu.MenuChoice();
+            
+            if (choice == "1")
             {
-                case 1:
-                    // Create new journal entry
-                    // Add entry to list of entries
-                    entry.CreateEntryWithData();
-                    entry.CreateEntry();
-                    break;
-                case 2:
-                // Display journal entries
-                break;
-                case 3:
-                // Save journal to file
-                break;
-                case 4:
-                // Load journal from file
-                break;
-                case 5:
-                    done = true;
-                    break;
+                // get prompt
+                string prompt = genPrompt.getPrompt();
+                Console.WriteLine($"Prompt: {prompt}");
+
+                // get response
+                Console.Write("Response: ");
+                string response = Console.ReadLine();
+
+                // create the entry WITH data
+                Entry newEntry = new Entry(prompt, response);
+
+                // save the entry
+                journal.AppendEntry(newEntry);
             }
-        } while (!done);
+            else if (choice == "2")
+            {
+                Console.WriteLine("\n-----Entries-----");
+                journal.DisplayEntries();
+            }
+            else if (choice == "3")
+            {
+                journal.SaveFile();
+            }
+            else if (choice == "4")
+            {
+                Console.Write("Choose file to load entries: ");
+                string loadFile = Console.ReadLine();
+                journal.LoadFile(loadFile);
+            }
+            else if (choice == "5")
+            {
+                running = false;
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Please make a proper choice");
+            }
+        }
     }
 }

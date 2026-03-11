@@ -52,9 +52,9 @@ class Bobsyouruncle
     {
         Console.WriteLine("Circle");
 
-        Circle myCircle = new Circle();
+        Circle myCircle = new Circle(999);
         
-        myCircle.SetRadius(10);
+        // myCircle.SetRadius(10);
         Console.WriteLine(myCircle.GetRadius());
         Console.WriteLine(myCircle.GetCircumference());
         Console.WriteLine(myCircle.GetArea());
