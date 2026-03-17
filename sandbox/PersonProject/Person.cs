@@ -9,8 +9,8 @@ class Person
     {
         _firstName=firstName;
         _lastName=lastName;
-        _age=age;
-        _weight=weight;
+        SetAge(age);
+        SetWeight(weight);
     }
     public string GetPersonInformation()
     {
