@@ -2,14 +2,12 @@ class BaseActivity
 {
     private string _name;
     private string _description;
-    private int _duration;
     private DateTime _endTime;
 
     public BaseActivity(string name, string description)
     {
         _name = name;
         _description = description;
-        _duration = 0;
         _endTime = DateTime.Now;
     }
 
@@ -41,5 +39,6 @@ class BaseActivity
             Thread.Sleep(sleepTime);
             Console.Write("\b");
         }
+        Console.CursorVisible = true;
     }
 }
