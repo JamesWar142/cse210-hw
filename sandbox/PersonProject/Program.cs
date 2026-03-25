@@ -2,7 +2,9 @@
 {
 public static void ProcessPerson(Person person)
     {
-        Console.WriteLine(person.GetPersonInformation());
+
+        Console.Write(person.GetPersonInformation());
+        Console.WriteLine($", My Salary is {person.GetSalary()}");
         if (person is Police police)
         {
         //    Console.WriteLine(police.GetPoliceInformation());
@@ -19,7 +21,7 @@ public static void ProcessPerson(Person person)
 
     public static void Main(string[] args)
     {
-        Person person = new Person("Bob", "Ross", 55, 195);
+        //Person person = new Person("Bob", "Ross", 55, 195);
         //Console.WriteLine(person.GetPersonInformation());
 
         Doctor doctor = new Doctor("Ax", "Bob", "Budge", 75, 210);
@@ -33,7 +35,7 @@ public static void ProcessPerson(Person person)
         //Console.WriteLine(police.GetPoliceInformation());
 
         List<Person> myPeople = new List<Person>();
-        myPeople.Add(person);
+        //myPeople.Add(person);
         myPeople.Add(doctor);
         myPeople.Add(police);
 

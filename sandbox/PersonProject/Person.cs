@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     private string _firstName;
     private string _lastName;
@@ -16,6 +16,7 @@ class Person
     {
         return $"Name: {_firstName} {_lastName}, Age: {_age}, Weight: {_weight}";
     }
+    public abstract double GetSalary();
     public int GetAge()
     {
         return _age;
