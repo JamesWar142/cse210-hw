@@ -1,4 +1,4 @@
-class Goal
+abstract class Goal
 {
     private string _name;
     private string _description;
@@ -33,4 +33,5 @@ class Goal
     {
         return $"Goal Information: {_name}, {_description}, {_numberOfPoints}";
     }
+    public abstract void CreateGoal();
 }
